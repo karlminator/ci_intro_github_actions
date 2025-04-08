@@ -1,7 +1,7 @@
-name: Hello World
+name: Run tests when pushing to Main
 
 on:
-  push:
+  pull_request:
     branches: ["main"]
 
 jobs:
