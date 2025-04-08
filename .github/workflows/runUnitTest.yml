@@ -5,11 +5,23 @@ on:
     branches: ["main"]
 
 jobs:
-  build:
+  run_tests:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello
+      - name: Start
         run: echo "Github Actions will now run tests"
+
+      - name: checkout repo
+        uses: actions/checkout@v4
+
+      - name: set up jdk
+        uses: actions/setup-java@v4
+        with:
+          java-version: "23"
+          distribution: "temurin"
+
+      - name: install dep, run tests
+        run: mvn test
 
 
 
