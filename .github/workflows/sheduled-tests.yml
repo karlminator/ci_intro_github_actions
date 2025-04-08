@@ -1,12 +1,12 @@
-name: Run tests when pushing to Main
+name: Run tests on schedule
 
 on:
   schedule:
-    - cron: "30 13 * * 1-5"
+    - cron: "35 13 * * 1-5"
       # minute hour day-of-month month day-of-week
 
 jobs:
-  run_tests:
+  scheduled_tests:
     runs-on: ubuntu-latest
     steps:
       - name: Start
