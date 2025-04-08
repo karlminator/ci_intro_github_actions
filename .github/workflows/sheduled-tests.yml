@@ -2,8 +2,8 @@ name: Run tests on schedule
 
 on:
   schedule:
-  #  - cron: "* 14 * * 1-5"
-    - cron: "*/20 * * * 1-5" # Every 20 minut, weekdays
+    - cron: "0 10 * * 1-5" # At 12, weekdays
+  #  - cron: "*/20 * * * 1-5" # Every 20 minut, weekdays
       # minute hour day-of-month month day-of-week
 
 jobs:
