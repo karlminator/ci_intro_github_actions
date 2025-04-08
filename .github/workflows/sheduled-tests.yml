@@ -3,7 +3,7 @@ name: Run tests on schedule
 on:
   schedule:
   #  - cron: "* 14 * * 1-5"
-    - cron: "*/15 * * * 1-5" # Every 15 minuit, weekdays
+    - cron: "*/20 * * * 1-5" # Every 20 minut, weekdays
       # minute hour day-of-month month day-of-week
 
 jobs:
@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Start
-        run: echo "Github Actions will now run tests"
+        run: echo "Github Actions will now run tests on schedule every 20 mins"
 
       - name: checkout repo
         uses: actions/checkout@v4
